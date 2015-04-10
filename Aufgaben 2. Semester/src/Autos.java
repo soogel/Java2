@@ -36,6 +36,13 @@ public class Autos {
 		for (Fahrzeuge f: treeSet) {
 			System.out.println(f);
 		}
+		System.out.println("=================================");
+		
+		TreeSet<Fahrzeuge> ts2 = new TreeSet<>(new FahrzeugeKwComparator());
+		ts2.addAll(treeSet);
+		for (Fahrzeuge f:ts2) {
+			System.out.println(f);
+		}
 
 	}
 
