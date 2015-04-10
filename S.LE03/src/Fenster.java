@@ -4,22 +4,27 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 
-public class MyFirstJFrame extends JFrame {
+public class Fenster extends JFrame {
 	
-	public MyFirstJFrame() {
-		super("Mein erstes Windows-Fenster");
-		setSize(480, 300);
+	public Fenster() {
+		super("Fenster");
+		setSize(450, 250);
 		setLocation(100, 100);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		Container c = getContentPane();
-		c.add(new JLabel("My first Label"));
+		c.add(new JLabel("Hello world"));
 		
 	}
 
 	public static void main(String[] args)  {
 		// TODO Auto-generated method stub
-		MyFirstJFrame mfjf = new MyFirstJFrame();
+		Fenster mfjf = new Fenster();
 		mfjf.setVisible(true);
+		
+		MyFirstDialog mdf = new MyFirstDialog(mfjf);
+		mdf.setVisible(true);
+		
+		
 		
 
 	}
