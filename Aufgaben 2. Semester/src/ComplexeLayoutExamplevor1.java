@@ -56,7 +56,7 @@ public class ComplexeLayoutExamplevor1 extends JFrame{
 		jsp.setViewportView(textArea);
 		p3.add(jsp);
 		p3.setAlignmentX(LEFT_ALIGNMENT);
-		p1.add(p3);
+		p1.add(p3, BorderLayout.CENTER);
 		
 		JPanel p4 = new JPanel();
 		p4.setLayout(new FlowLayout(FlowLayout.RIGHT));
