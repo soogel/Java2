@@ -21,11 +21,13 @@ public class DiaLogSper extends JFrame{
 //		JButton button = new JButton("my Button");
 //		c.add(button);
 		
-		c.add(new JLabel("test"));
+		
+				JLabel jl = new JLabel("test");
+				c.add(jl);
 		c.setLayout(new FlowLayout());
 		
 		//Registrierung des ActionListeners
-		DiaLogSperAc mAl = new DiaLogSperAc();
+		DiaLogSperAc mAl = new DiaLogSperAc(null);
 		c.addMouseListener(mAl);
 		
 	}

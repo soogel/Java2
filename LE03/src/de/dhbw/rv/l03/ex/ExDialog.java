@@ -1,12 +1,15 @@
+package de.dhbw.rv.l03.ex;
+
 import java.awt.Container;
 import java.awt.Point;
 
 import javax.swing.JDialog;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
-
-public class DiaLogSperDia extends JDialog{
-	public DiaLogSperDia(JFrame parent){
+public class ExDialog extends JDialog {
+	
+	public ExDialog(JFrame parent) {
 		super(parent);
 		setSize(200, 100);
 		setTitle("My First Dialog");
@@ -15,7 +18,8 @@ public class DiaLogSperDia extends JDialog{
 		
 		Point p = parent.getLocation();
 		setLocation(p);
+		
 		Container c = getContentPane();
-		//c.add(comp)
+		c.add(new JLabel("Sie sind mit der Maus über den Text gefahren"));
 	}
 }

@@ -1,19 +1,18 @@
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+package de.dhbw.rv.l03.ex;
+
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 import javax.swing.JFrame;
 
+public class ExMouseListener implements MouseListener {
 
-public class DiaLogSperAc implements ActionListener, MouseListener {
-	private JFrame parent;
+	private JFrame parent; 
 	
-	public DiaLogSperAc (JFrame j){
+	public ExMouseListener(JFrame j) {
 		this.parent = j;
-		
 	}
-
+	
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
@@ -22,12 +21,9 @@ public class DiaLogSperAc implements ActionListener, MouseListener {
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
-		// TODO Auto-generated method stub
-		System.out.println("Text überfloge");
-		//DiaLogSperDia dlsd = new DiaLogSperDia(new DiaLogSper());
-		DiaLogSperDia dlsd = new DiaLogSperDia(parent); 
-		dlsd.setVisible(true);
-		
+		System.out.println("Mouse Entered");
+		ExDialog ed = new ExDialog(parent);
+		ed.setVisible(true);
 	}
 
 	@Override
@@ -48,10 +44,6 @@ public class DiaLogSperAc implements ActionListener, MouseListener {
 		
 	}
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
+	
+	
 }
