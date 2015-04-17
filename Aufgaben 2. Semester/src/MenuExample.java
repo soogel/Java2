@@ -1,7 +1,10 @@
+import java.awt.event.InputEvent;
+
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.KeyStroke;
 
 
 public class MenuExample extends JFrame {
@@ -33,6 +36,11 @@ public MenuExample(){
 	fileMenu.add(open);
 	fileMenu.add(save);
 	fileMenu.add(lastOpend);
+	
+	// Shortcuts
+	KeyStroke ksSave = KeyStroke.getKeyStroke('S' InputEvent.CTRL_MASK);
+	save.setAccelerator(ksSave);
+	
 	
 	
 	
