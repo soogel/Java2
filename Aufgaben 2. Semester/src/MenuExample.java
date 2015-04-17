@@ -32,6 +32,7 @@ public MenuExample(){
 	//MenuITEM DEM jmENU dATEI ZUORDNEN
 	fileMenu.add(open);
 	fileMenu.add(save);
+	fileMenu.add(lastOpend);
 	
 	
 	
