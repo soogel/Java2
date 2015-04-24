@@ -13,6 +13,15 @@ public class HSQLDBConnector {
 		try {
 			Connection con = HSQLDBConnector.createConnection();
 			
+			//MetaDaten testen
+			DatabaseMetaData dmd = con.getMetaData();
+			System.out.println("=======================Connection Details======");
+			System.out.println("DB Name: " +dmd.getDatabaseProductName());
+			System.out.println("DB Version: "+ dmd.getDatabaseProductVersion());
+			System.out.println("DB driver name: "+ dmd.getDriverName());
+			System.out.println("DB Treiber Version: "+ dmd.getDriverVersion());
+			System.out.println("================================================");
+			
 			
 			con.close();
 		} catch (SQLException e) {
@@ -27,12 +36,9 @@ public class HSQLDBConnector {
 		try {
 			//Connection aufbauen
 			Class.forName("org.hsqldb.jdbcDriver");
-			con = DriverManager.getConnection("jdbc:hsqldb:file:Y:\\DatenBank\\WI20144");
+			con = DriverManager.getConnection("jdbc:hsqldb:file:Y:\\DatenBank\\WI2014");
 			
-			//MetaDaten testen
-			DatabaseMetaData dmd = con.getMetaData();
-			System.out.println("DB Name: " +dmd.getDatabaseProductName());
-			System.out.println("DB Version: "+ dmd.getDatabaseProductVersion());
+			
 			
 			//Statement erstellen?
 			//Statement stm = con.createStatement();
