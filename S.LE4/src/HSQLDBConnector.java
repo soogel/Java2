@@ -9,14 +9,20 @@ public class HSQLDBConnector {
 	
 
 	public static void main(String[] args) {
-		HSQLDBConnector temp = new HSQLDBConnector();
 		
-		temp.dbVerbinndung();
-		
+		try {
+			Connection con = HSQLDBConnector.createConnection();
+			
+			
+			con.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	
-	public  Connection dbVerbinndung() {
+	public static Connection createConnection() {
 		Connection con= null;
 		try {
 			//Connection aufbauen
