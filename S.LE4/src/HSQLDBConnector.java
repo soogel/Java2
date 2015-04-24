@@ -12,11 +12,11 @@ public class HSQLDBConnector {
 		HSQLDBConnector temp = new HSQLDBConnector();
 		
 		temp.dbVerbinndung();
-
+		
 	}
 	
 	
-	public Connection dbVerbinndung() {
+	public  Connection dbVerbinndung() {
 		Connection con= null;
 		try {
 			//Connection aufbauen
