@@ -5,6 +5,8 @@ import java.sql.Statement;
 
 public class PersonDao {
 	private Connection con;
+	private Statement stmt;
+	
 	public PersonDao()throws SQLException, ClassNotFoundException{
 		con = HSQLDBConnector.createConnection();
 	}
@@ -18,7 +20,9 @@ public class PersonDao {
 		System.out.println(sql);
 		
 		stmt.executeUpdate(sql);
-		stmt.close();
+		
+		//überarbeitet 
+		//stmt.close();
 	}
 
 //	public static void main(String[] args) {
@@ -27,6 +31,7 @@ public class PersonDao {
 //	}
 	public void close() throws SQLException{
 		con.close();
+		stmt.close();
 	}
 
 }
