@@ -14,7 +14,7 @@ public class SQLReader {
 			try {
 				Connection con = HSQLDBConnector.createConnection();
 				
-				//Schritt 1: Statement 
+				//Schritt 1: Statement  Objekt
 				Statement stmt = con.createStatement();
 				
 				//Schritt 2: SQL Befehl festlegen
