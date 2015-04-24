@@ -2,15 +2,16 @@ import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
-import org.hsqldb.DatabaseManager;
+import java.sql.Statement;
 
 
 public class HSQLDBConnector {
 	
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		HSQLDBConnector temp = new HSQLDBConnector();
+		
+		temp.dbVerbinndung();
 
 	}
 	
@@ -18,13 +19,17 @@ public class HSQLDBConnector {
 	public Connection dbVerbinndung() {
 		Connection con= null;
 		try {
-			Class.forName("org.hsqldb.jdbc.JDBCDriver");
-			con = DriverManager.getConnection("jdbc:hsqldb:file:Y:\\DatenBank\\WI2014");
+			//Connection aufbauen
+			Class.forName("org.hsqldb.jdbcDriver");
+			con = DriverManager.getConnection("jdbc:hsqldb:file:Y:\\DatenBank\\WI20144");
 			
 			//MetaDaten testen
 			DatabaseMetaData dmd = con.getMetaData();
 			System.out.println("DB Name: " +dmd.getDatabaseProductName());
 			System.out.println("DB Version: "+ dmd.getDatabaseProductVersion());
+			
+			//Statement erstellen?
+			//Statement stm = con.createStatement();
 			
 			
 		} catch (ClassNotFoundException e) {
